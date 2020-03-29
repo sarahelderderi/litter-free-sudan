@@ -1,400 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-    <title>Sarah Elderderi | Aspiring Software Engineer</title>
+  <head><link rel='icon' href='favicon.ico' type='image/x-icon'/>
   </head>
   <body>
-    <div id="root"></div>
-
+    <!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baskervville">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
-
-.arrow {
-  left: 45%;
-  position: absolute;
-  bottom: 0;
-  font-size: 10px;
-}
-.skills{
-  font-size: 18px;
-}
-span {
-  background-color: #E5E5E5;
-}
-.typewriter h1 {
-  font-size: 12px;
-  color: black;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap;/* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
-.title h1 {
-  font-family: monospace;
-}
-.title{
-  background-color: #f0fff4;
-  height: 100vh;
-}
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-body {
-  margin: 0;
-  background-color: #f0fff4;
-}
-main {
-  display: flex;
-  min-height: 100vh;
-  background: linear-gradient(44deg, rgb(41, 255, 107), #66a3ff);
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
 }
 
-.chevron-down {
-  fill: #99cccc;
-  margin: auto;
-  width: 5em;
-  height: 5em;
-  animation: hover-me .5s infinite ease-in-out alternate;
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
 }
 
-@keyframes hover-me {
-  100% { transform: translate3d(0, 25px, 0); }
+.menu {
+  display: none;
 }
-#about {
-  padding: 50px;
-}
-#experience {
-  padding: 30px;
-}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-.full-height {
-    height: 100%;
-  }
-p.right{
-  float:right;
-}
-img {
-  border-radius: 50%;
-}
-img.square{
-  border-radius: 0%;
-}
-.footer {
-  width: 100%;
-  bottom: 0;
-}
-.w3-lobster {
-  font-family: "Lobster", serif;
-}
-.w3-baskervville {
-  font-family: "Baskervville", serif;
-}
-.w3-inconsolata {
-  font-family: "Inconsolata", serif;
-}
-
 </style>
-<body class="w3-baskervville">
+<body>
 
-<!-- Page Content -->
-<div id="main">
-  <!-- Header/Home -->
-  <header class="w3-baskervville w3-container w3-padding-32 w3-center" id="home">
-  <div class="title">
-    <img src="https://i.ibb.co/drMVWhG/78675446-10221476338043801-3282599313414291456-n.jpg" alt="profile" width="200" height="200">
-    <br><br>
-    <h1 style="font-size: 34px;">Sarah Elderderi</h1>
-    <div class="typewriter">
-      <h1>Aspiring Software Engineer</h1>
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">Our Cause</a>
     </div>
-    <div class="arrow" onclick="window.location.href='#about'">
-    <svg onclick="window.location.href='#about'" viewBox="0 0 68 33" class="chevron-down">
-    <path d="M.58 3.414l27.432 27.433c2.715 2.715 7.167 2.787 9.964.164L67.356 3.46 64.62.54 35.24 28.093c-1.222 1.146-3.212 1.114-4.4-.075L3.408.586.579 3.414z"></path>
-    </svg>
-  </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">Donate</a>
     </div>
-  </header>
-
-  <!-- Profile Section -->
-  <div class="full-height w3-inconsolata" id="about">
-    <div class="title" style="padding-top:50px;"><h2> 👋🏽</h2>
-    <p class="w3-inconsolata" style="font-size:20px" align="center">
-      Thanks for stopping by!
-      <br><br>I am an incoming Computer Science graduate at Queen Mary, University of London  <i class="fa fa-university"></i>
-       <br><br>I spent my summer at Siemens' Cambridge office, where I helped maintain their CAD software, NX. Check out some of the <a href="#siemens">projects</a> I worked on whilst I was there.
-    </p><br></div>
-
-  <!-- Skills Section -->
-      <h3 class="w3-padding-16 w3-text-black"><i class="fa fa-gear fa-spin w3-xxlarge"></i> Skills</h3>
-      <div class="title skills">
-      <span>Final Year Project</span> <span>Python</span> <span>Django</span><br>
-      <span>Computer Graphics</span> <span>(WebGL)</span> <span>JavaScript</span><br>
-      <span> Embedded Systems</span> <span>ARM Microcontroller</span> <span>C</span><br>
-      <span> Web Programming</span>
-      <span>Django</span>
-      <span>JavaScript</span>
-      <span>AngularJS</span> <span>jQuery</span>
-      <span>jQuery</span>
-      <br>
-      <span>Bayesian Risk & Decision Analysis</span>
-      <span>Interaction Design</span>
-      <span>JavaScript</span> <span>Java</span> <span>ReactJS</span> <span>AutoCAD</span> <span>Siemens NX</span><br>
-      <span>Arabic</span> <span>English</span> <span>Spanish</span><br>
-      <span><a href="https://www.freecodecamp.org/sarahelderderi">Javascript Algorithms And Data Structures (300 hours)</a></span>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">Get Involved</a>
     </div>
-
-  <!-- Projects Section -->
-  <br><br>
-  <h2 class="w3-text-black"><i class="fa fa-laptop w3-xxlarge"></i> Projects</h2>
-  <div align="center" id="projects">
-      <div>
-        <div class="numbertext">1 / 4</div>
-          <h3 style="font-size:26px" class="w3-inconsolata">Plant Shower</h3>
-          <img class="square" width="250" height="310" src="https://i.ibb.co/pxgH4bf/plant-watering.jpg">
-          <p>Here, I used the <b>Arduino</b> development board to create an <b>automated</b> plant watering device prototype.<br>
-            <br><i style="font-size:24px" class="fa">&#xf0eb;</i>	Reuses water by storing in a built-in tank.
-            <br><i style="font-size:24px" class="fa">&#xf0eb;</i>	Utilises resistivity sensors that measure soil moisture and electrical water pump.
-            <br><i style="font-size:24px" class="fa">&#xf0eb;</i> Allows those with <b>limited mobility</b> to maintain their plants.
-          </p>
-        </div>
-        <hr>
-        <div>
-          <div class="numbertext">2 / 4</div>
-          <h3 style="font-size:26px" class="w3-inconsolata">SudanUK Website</h3>
-          <img class="square" src="https://i.ibb.co/0f8KtQD/Screen-Shot-2019-11-25-at-00-25-06.png" style="width:100%">
-          <p>Here is a screenshot of a website I handcoded for a youth run organisation, SudanUK, that aims to support the Sudanese diaspora in the United Kingdom.
-          <br>
-          <br><i style="font-size:24px" class="fa">&#xf0eb;</i>	Uses the React JavaScript library.
-        </p>
-        </div>
-        <hr>
-        <div>
-          <div class="numbertext">3 / 4</div>
-          <h3 style="font-size:26px" class="w3-inconsolata">Project Khartoum</h3>
-          <img class="square" src="https://i.ibb.co/wJDhPkQ/dyasynora.png" style="width:100%">
-          <p>Here is a crowdsourcing platform I am currently developing for Community-Led projects in Khartoum, Sudan.
-          <br>
-          <br><i style="font-size:24px" class="fa">&#xf0eb;</i> Web app created with Django, the Python web framework.
-        </p>
-        </div>
-
-  <br>
-
-  </div> <!-- End Projects Section -->
-  <!-- Experience -->
-  <h2 class="w3-text-black"><i class="fa fa-briefcase w3-xxlarge"></i> Experience</h2>
-  <div class="w3-baskervville" id="experience">
-
-  <div id="siemens">
-  <a href="https://www.sw.siemens.com/"><img src="https://i.ibb.co/ZJKSJSQ/siemens.png" alt="Siemens" class="w3-left w3-square w3-margin-right" width="80"/></a>
-  <p style="font-size:20px"><b>Siemens Industry Software Ltd, Cambridge</b><br><b>Software Engineering Intern</b>
-  </p>
-  <p style="font-size:14px" class="right">Jul 2019- Sep 2019</p>
-  <br><br>
-    <p align="left"> At Siemens, I contributed to the core development of their CAD software- <a href="https://www.plm.automation.siemens.com/global/en/products/nx/">Siemens NX.</a>
-    I was involved in all SDLC stages, on various projects. This position required a good understanding of
-  C++ which was used to write, both development and test code.
-
-  <br><br>Projects and tasks I worked on at Siemens:<br>(changes I submitted will be available in the next release of NX: NX 1926)
-  <br><br>- Touch Align- Find Closest: <br>
-    Designing and implementing a new geometric constraint option, "Find Closest", which aligns components by determining the closest starting orientation. The option
-  reduces the frequency at which users will need to manually switch between the Touch or Align options or to flip the solution NX provides.
-  <br><br><p align="center" style="padding:20px"><img class ="square" src="https://i.ibb.co/FwTy8zT/find-closest.png" alt="Find Closest" width="100%"/></p>
-<br>
-  <br><br>- Object Information Output: <br> Updating the format of the component information to be more user friendly and comprehensible. This involved working with both the product development and UI teams, who are based in Plano, TX.
-  <br><br>- Autotests: <br> Writing autotests for an array of geometric constraint options, including the option I developed, "Find Closest", and some others. This involved creating new test suite files and creating references to them in existing test sequence files in Siemens NX's large legacy codebase.
-  </p>
-</div>
-<hr>
-<a href="https://www.sudanuk.com/"><img src="https://i.ibb.co/DQQnGbH/logoo.png" alt="sudanUK" class="w3-left w3-square w3-margin-right" width="80"/></a>
-<p style="font-size:24px"><b>SudanUK</b><br><b>Web Developer</b>
-</p>
-<p style="font-size:14px" class="right">Jun 2019- present</p>
-<br><br>
-  <p align="left"> This summer, I built a website for the organisation, SudanUK and currently maintain it. This includes, tracking the site statistics, speed and updating the content.
-  <br><br><a href="https://www.sudanuk.com/">See SudanUK website</a>
-</p><hr>
-
-  <a href="https://www.qmul.ac.uk/"><img src="https://i.ibb.co/M5dg6Y2/qmul.jpg" alt="QMUL" class="w3-left w3-square w3-margin-right" width="80"/></a>
-  <p style="font-size:24px" align="left"><b>Queen Mary, University of London<br>Student Demonstrator</b>
-  </p>
-  <p class="right">Sep 2019- present</p>
-  <br><br>
-  <p> This year, I have started working at my university, assisting a senior lecturer, helping and offering support to first year students in a Procedural Programming lab.
-  This involves guiding them through programming exercises in Java, that cover fundamental topics, including: control structures, abstraction and search and sort algorithms..</p>
-  <hr>
-  <a href="https://www.ucl.ac.uk/computer-science/"><img src="https://i.ibb.co/8MkVvqs/uclsquare.jpg" alt="UCL" class="w3-left w3-square w3-margin-right" width="80"/></a>
-  <p style="font-size:24px"><b>University College London<br>Work Placement</b>
-  </p>
-    <p class="right">Summer 2017 & Summer 2018</p>
-    <br><br>
-    <p align="left"> At UCLs Department of Computer Science, I worked closely with teaching fellow, Dr Ghita Kouadri Mostefaoui. Collating publications on strategies in teaching programming for novice students.
-   <br> This experience inspired me to create a robotics club at my academy.</p>
-  <hr>
-  <a href="http://www.uclacademy.co.uk"><img src="https://i.ibb.co/PGVmr3n/uclaLogo.jpg" alt="UCLA" class="w3-left w3-square w3-margin-right" width="80"/></a>
-  <p style="font-size:24px"><b>The UCL Academy, London<br>Robotics Club Founder and Teacher</b><br>
-  </p>
-  <p class="right">Jan 2017- Jun 2017</p>
-  <br><br>
-  <p>In <b>2017</b>, I launched and ran The UCL Academy Robotics Club.</p>
-
-    <p> - Assembled a team of like-minded students and created a proposal for the club, which we delivered to the head of the Engineering Department. </p>
-    <p> - Planned and delivered weekly project based lessons, to students aged 11-13. Guiding each team to create an obstacle avoiding robot using the Arduino development board, and input and output devices. This involved writing code in C and designing circuits.</p>
-    <p> - Simplified difficult Artificial Intelligence concepts when presenting and giving feedback to the class. </p>
-  <p><b>Lego Mindstorms Club, The UCL Academy:</b></p>
-  <p> - Attended national Lego League competition as a mentor and coach to a team of KS3 students who participated.</p>
-  <p> - Coordinated team to design and program Lego Mindstorms EV3 to accomplish assigned missions.</p>
-  <hr>
-  <a href="https://stemettes.org/"><img src="https://i.ibb.co/1LmZcFY/download.jpg" alt="STEMettes" class="w3-left w3-square w3-margin-right" width="80"/></a>
-  <p style="font-size:24px"><b>STEMettes<br>Student Mentor</b></p>
-  <br>
-    <hr>
-    <a href="http://acornaspirations.com/"><img src="https://i.ibb.co/m9RpX0f/acorn-logo.jpg" alt="Hackathon" class="w3-left w3-square w3-margin-right" width="80"/></a>
-    <p style="font-size:24px"><b>AcornHack London, Acorn Aspirations<br>#ACORNHACK2016</b></p>
-    <br>
-<!-- End Experience Section -->
-</div>
-
-<!-- Contact Section -->
-<div class="w3-padding-64 w3-content w3-text-black" id="contact">
-  <div class="footer">
-  <div class="w3-section">
-    <p align="center"><a href="mailto:sarahelderderi@gmail.com"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right "></i></a>
-    <a href="https://github.com/sarahelderderi"><i class="fa fa-github fa-fw w3-xxlarge w3-margin-right "></i></a>
-    <a href="https://linkedin.com/in/sarahelderderi"><i class="fa fa-linkedin fa-fw w3-xxlarge w3-margin-right "></i></a>
-    <br><br>Hand coded by me © 2020</p>
-  </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">Subscribe</a>
+    </div>
   </div>
 </div>
-<!-- END PAGE CONTENT -->
-</div></div>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149350428-1"></script>
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">سودان بدون اوساخ</span>
+  </div>
 
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">Khartoum</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT LITTER FREE SUDAN</span></h5>
+    <p>This campaign was started blabla in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>We also in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Quote about campaign by member - lorem ipsum dolore." Slogan of some sort.</i></p>
+      <p>Name of person, Their position: Campaign Manager e.g.</p>
+    </div>
+    <img src="https://i.ibb.co/B4Dk8hY/Screenshot-2020-02-22-at-21-12-41.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>More info:</strong> lorem ipsum.</p>
+    <p><strong>Address:</strong> Khartoum.</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PROJECTS</span></h5>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Our Past Projects</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Ongoing Projects</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Burri neighbourhood</h5>
+      <p class="w3-text-grey">Photos and information about this project.</p><br>
+
+      <h5>Project 2</h5>
+      <p class="w3-text-grey">Info about project 2.</p><br>
+
+      <h5>Project 3</h5>
+      <p class="w3-text-grey">Info about project 3.</p><br>
+
+      <h5>Project 4</h5>
+      <p class="w3-text-grey">Info about project 4.</p><br>
+
+      <h5>Project 5</h5>
+      <p class="w3-text-grey">Info about project 5.</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>..</h5>
+      <p class="w3-text-grey">..</p><br>
+
+      <h5>..</h5>
+      <p class="w3-text-grey">...</p><br>
+
+      <h5>..</h5>
+      <p class="w3-text-grey">..</p><br>
+
+      <h5>..</h5>
+      <p class="w3-text-grey">..</p><br>
+
+      <h5>..</h5>
+      <p class="w3-text-grey">..</p>
+    </div>
+    <img src="https://i.ibb.co/mX9MhXh/Screenshot-2020-02-22-at-21-05-31.png" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer ...</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
   </body>
 </html>
